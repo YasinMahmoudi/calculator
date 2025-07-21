@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title> Calculator </title>
+
+    <!-- FONTS -->
+
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet" />
+
+    <link
+      rel="stylesheet"
+      href="style.css" />
+
+    <script
+      defer
+      src="script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <!-- MOBILE -->
+      <div class="mobile">
+        <div class="mobile__wrapper">
+          <div class="mobile__header">
+            <div class="mobile__header__top">
+              <div class="mobile__box-icon">
+                <svg
+                  fill="currentColor"
+                  class="mobile__icon">
+                  <use xlink:href="./images/symbol-defs.svg#icon-battery" />
+                </svg>
+
+                <svg
+                  fill="currentColor"
+                  class="mobile__icon">
+                  <use xlink:href="./images/symbol-defs.svg#icon-signal" />
+                </svg>
+
+                <svg
+                  fill="currentColor"
+                  class="mobile__icon">
+                  <use xlink:href="./images/symbol-defs.svg#icon-wifi" />
+                </svg>
+              </div>
+              <span class="mobile__time"> 10:30 </span>
+            </div>
+
+            <div class="mobile__header__bottom">
+              <div class="toggle">
+                <svg
+                  fill="currentColor"
+                  class="toggle__icon toggle__icon--active"
+                  data-mode="dark">
+                  <use xlink:href="./images/symbol-defs.svg#icon-moon-o" />
+                </svg>
+
+                <svg
+                  fill="currentColor"
+                  class="toggle__icon"
+                  data-mode="light">
+                  <use xlink:href="./images/symbol-defs.svg#icon-sun" />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile__body">
+            <div class="screen">
+              <div class="screen__operation">
+                <div class="screen__operation__result"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="mobile__footer">
+            <div class="keypad">
+              <div class="keypad__row">
+                <div class="keypad__item keypad__item--clear">
+                  <button
+                    class="keypad__btn keypad__btn--clear keypad__btn--primary"
+                    data-value="ac">
+                    <span class="keypad__text"> AC </span>
+                  </button>
+                </div>
+
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="%">
+                    <svg
+                      fill="currentColor"
+                      class="keypad__icon keypad__icon--primary">
+                      <use xlink:href="./images/symbol-defs.svg#icon-percent" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="/">
+                    <svg
+                      fill="currentColor"
+                      class="keypad__icon keypad__icon--secondary">
+                      <use xlink:href="./images/symbol-defs.svg#icon-divide" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="keypad__row">
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="7">
+                    <span class="keypad__text"> 7 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="8">
+                    <span class="keypad__text"> 8 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="9">
+                    <span class="keypad__text"> 9 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="*">
+                    <svg
+                      fill="currentColor"
+                      class="keypad__icon keypad__icon--secondary">
+                      <use xlink:href="./images/symbol-defs.svg#icon-x" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="keypad__row">
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="4">
+                    <span class="keypad__text"> 4 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="5">
+                    <span class="keypad__text"> 5 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="6">
+                    <span class="keypad__text"> 6 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="-">
+                    <svg
+                      fill="currentColor"
+                      class="keypad__icon keypad__icon--secondary">
+                      <use xlink:href="./images/symbol-defs.svg#icon-minus" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="keypad__row">
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="1">
+                    <span class="keypad__text"> 1 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="2">
+                    <span class="keypad__text"> 2 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="3">
+                    <span class="keypad__text"> 3 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="+">
+                    <svg
+                      fill="currentColor"
+                      class="keypad__icon keypad__icon--secondary">
+                      <use xlink:href="./images/symbol-defs.svg#icon-plus" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="keypad__row">
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="0">
+                    <span class="keypad__text"> 0 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value="00">
+                    <span class="keypad__text"> 00 </span>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn"
+                    data-value=".">
+                    <svg
+                      fill="currentColor"
+                      class="keypad__icon">
+                      <use
+                        xlink:href="./images/symbol-defs.svg#icon-dot-single" />
+                    </svg>
+                  </button>
+                </div>
+                <div class="keypad__item">
+                  <button
+                    class="keypad__btn keypad__btn--equal"
+                    data-value="=">
+                    <svg
+                      fill="currentColor"
+                      class="keypad__icon keypad__icon--secondary">
+                      <use xlink:href="./images/symbol-defs.svg#icon-equal" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
